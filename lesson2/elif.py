@@ -23,7 +23,7 @@ else:
 print("************ example 4 ************")
 age = 20
 result = "Adult" if age >= 18 else "Child"
-
+print(result)
 
 
 
