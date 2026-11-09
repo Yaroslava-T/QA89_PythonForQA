@@ -53,6 +53,13 @@ u = '076921123943251'
 print(s.isalpha()) #метод для определения, состоит ли запрос только из букв
 print(u.isdigit()) #метод для определения, состоит ли запрос только из цифр
 print(u.isnumeric()) #метод для определения, состоит ли запрос только из чисел
+print("----------- example 2 ------------")
+s = 'Ⅻ'
+print(s.isalnum())
+print(s.isnumeric())
+s = 'XII'
+print(s.isalnum())
+print(s.isnumeric())
 
 print("************ index ************")
 #index()
@@ -65,7 +72,7 @@ print("************ replace ************")
 #replace()
 text1 = "I like Python"
 print(text1.replace("Python","Python and Coffee"))
-print("************ пример 2 ************")
+print("----------- example 2 ------------")
 text  = "2026-07-03"
 new_text = text.replace("-","/")
 print(new_text)
