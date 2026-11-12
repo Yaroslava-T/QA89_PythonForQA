@@ -1,110 +1,140 @@
-age = 25
-name = "Yaroslava"
-#int - целые числа
-#float -дробные числа
-#str- строки
-#bool - логический
+print("************ example 1 (variables and data types) ************")
+age = 25                                          # int - целое число
+name = "Yaroslava"                                # str - строка
+# int   - целые числа
+# float - дробные числа
+# str   - строки
+# bool  - логический тип True / False
+print()
 
-said = "She said 'Hello'"
-print(said)
+print("************ example 2 (quotes inside string) ************")
+said = "She said 'Hello'"                         # строка с одинарными кавычками внутри
+print(said)                                       # She said 'Hello'
+print()
 
+print("************ example 3 (multiline string) ************")
 my_string = '''This is a multy-line string.
-We've wrapped the text to the next line'''
-print(my_string)
+We've wrapped the text to the next line'''        # многострочная строка
+print(my_string)                                  # выводит текст в несколько строк
+print()
 
-raw_string = r"C:\Program Files\Yaroslava\Python"
-print(raw_string)
+print("************ example 4 (raw string) ************")
+raw_string = r"C:\Program Files\Yaroslava\Python" # raw-строка: \ не обрабатывается как спецсимвол
+print(raw_string)                                 # выводит путь как есть
+print()
 
+print("************ example 5 (type) ************")
 s1 = "Hello Yaroslava"
-print(type(s1))
+print(type(s1))                                   # тип str
 s2 = 5
-print(type(s2))
+print(type(s2))                                   # тип int
 s3 = True
-print(type(s3))
+print(type(s3))                                   # тип bool
 s4 = 2.0
-print(type(s4))
+print(type(s4))                                   # тип float
+print()
 
+print("************ example 6 (string concatenation) ************")
 s5 = 'Zeleno'
 s6 = 'glazka'
-s7 =  s5 + s6
-print(s7)
+s7 = s5 + s6                                      # объединяет две строки
+print(s7)                                         # Zelenoglazka
+print()
 
-#join()
+print("************ example 7 (join) ************")
 words = ["Hello", "World", "and", "Python"]
-res = ",".join(words)
-print(res)
+res = ",".join(words)                             # соединяет элементы списка через запятую
+print(res)                                        # Hello,World,and,Python
+print()
 
-st = "ab" * 7
-print(st)
+print("************ example 8 (string multiplication) ************")
+st = "ab" * 7                                     # повторяет строку 7 раз
+print(st)                                         # ababababababab
+print()
 
-st1 = 35 * '*'
-print(st1)
+print("************ example 9 (repeat symbol) ************")
+st1 = 35 * '*'                                    # повторяет символ * 35 раз
+print(st1)                                        # выводит 35 звёздочек
+print()
 
+print("************ example 10 (in operator with string) ************")
 s1 = 'Kris Tomash'
 s2 = 'Kristina'
 
 if s2 in s1:
-    print("User Kristina is in a DB")
+    print("User Kristina is in a DB")              # если строка найдена внутри s1
 else:
-    print("User Kristina is not in a DB")
+    print("User Kristina is not in a DB")          # если строка не найдена
+print()
 
+print("************ example 11 (multiple comparisons with or) ************")
 st = 'a'
 if st == 'a' or st == 'b' or st == 'c' or st == 'd':
-    print("Yes")
+    print("Yes")                                   # проверяет несколько вариантов через or
+print()
 
+print("************ example 12 (in instead of multiple or) ************")
 if st in 'abcd':
-    print("Yes")
+    print("Yes")                                   # проверяет наличие символа в строке
+print()
 
-#********************************
-#len()
-ln = len('Zelenoglazka')
-print(ln)
+print("************ example 13 (len) ************")
+ln = len('Zelenoglazka')                          # считает количество символов
+print(ln)                                         # 12
 
 s1 = 'Zelenoglazka'
-print(len(s1))
+print(len(s1))                                    # 12
+print()
 
-#**********************************
-#0 1 2 3 4 5
-#P Y T H O N
-
+print("************ example 14 (positive indexes) ************")
+# 0 1 2 3 4 5
+# P Y T H O N
 st = 'Python'
-print(st[0])
-print(st[1])
-print(st[2])
-print(st[3])
-print(st[4])
-print(st[5])
-# print(st[6])
+print(st[0])                                      # P
+print(st[1])                                      # y
+print(st[2])                                      # t
+print(st[3])                                      # h
+print(st[4])                                      # o
+print(st[5])                                      # n
+# print(st[6])                                    # ошибка: такого индекса нет
+print()
 
-#-6 -5 -4 -3 -2 -1
-#P  Y  T  H  O  N
-st = 'Python'
-
-print(st[-1])
-print(st[-2])
-print(st[-3])
-print(st[-6])
-
+print("************ example 15 (negative indexes) ************")
+# -6 -5 -4 -3 -2 -1
+#  P  y  t  h  o  n
 st = 'Python'
 
-print(st[0:3])
-print(st[2:5])
-print(st[4:6])
+print(st[-1])                                     # n
+print(st[-2])                                     # o
+print(st[-3])                                     # h
+print(st[-6])                                     # P
+print()
 
+print("************ example 16 (string slicing) ************")
+st = 'Python'
+
+print(st[0:3])                                    # Pyt
+print(st[2:5])                                    # tho
+print(st[4:6])                                    # on
+print()
+
+print("************ example 17 (slice with step) ************")
 my_string = "Hello world"
-every_second_char = my_string[::2]
-print(every_second_char)
+every_second_char = my_string[::2]                # берет каждый второй символ
+print(every_second_char)                          # Hlowrd
+print()
 
-reversed_string = my_string[::-1] #step -1
-print(reversed_string)
+print("************ example 18 (reverse string) ************")
+reversed_string = my_string[::-1]                 # переворачивает строку, шаг -1
+print(reversed_string)                            # dlrow olleH
+print()
 
-from_second = my_string[1::2]
-print(from_second)
+print("************ example 19 (slice from second character) ************")
+from_second = my_string[1::2]                     # с индекса 1 берет каждый второй символ
+print(from_second)                                # el ol
+print()
 
-my_substring = my_string[1:10:3]
-print(my_substring)
-
-
-
-
-
+print("************ example 20 (slice start stop step) ************")
+my_substring = my_string[1:10:3]                  # start=1, stop=10, step=3
+print(my_substring)                               # eoo
+print()

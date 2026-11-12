@@ -1,0 +1,2 @@
+Hello auto tests!
+Second Line!
